@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body > .section {
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    body > .section h4 {
+      margin-bottom: 12px;
+    }
+
+    body > .section > div {
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+
+    button {
+      padding: 6px 12px;
+      outline: none;
+      border: none;
+      background: rgba(210, 204, 204, 0.62);
+      margin: 0 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="section" id="config">
+    <h4>Add details</h4>
+    <div>
+      <label for="name">
+        Name:
+        <input text id="name"/>
+      </label>
+    </div>
+    <div>
+      <label for="title">
+        Title:
+        <input text id="title"/>
+      </label>
+    </div>
+    
+    <div>
+      <label for="description">
+        Description:
+        <textarea text id="description"> </textarea>
+      </label>
+    </div>
+  </div>
+
+  <div class='section'>
+    <h4>Change the way it looks</h4>
+    <button id="default">Default contact card </button>
+    <button id="business">Business contact card </button>
+    <button id="fuzzy">Fuzzy contact card </button>
+  </div>
+
+  <contact-card></contact-card>
+
+
+  <script src="./main.js"></script>
+</body>
+</html>
