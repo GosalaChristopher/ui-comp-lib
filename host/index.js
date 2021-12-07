@@ -3,14 +3,19 @@ window.onload =() => {
 
   document.getElementById('default').addEventListener('click', () => {
     document.querySelector('contact-card').setAttribute('variant', 'default');
+    document.querySelector('contact-card').removeAttribute('bootstraped');
+
   });
 
   document.getElementById('business').addEventListener('click', () => {
     document.querySelector('contact-card').setAttribute('variant', 'business');
+    document.querySelector('contact-card').removeAttribute('bootstraped');
+
   });
 
   document.getElementById('fuzzy').addEventListener('click', () => {
     document.querySelector('contact-card').setAttribute('variant', 'fuzzy');
+    document.querySelector('contact-card').removeAttribute('bootstraped');
   });
 
   const setConfig = (confSet) => {
@@ -20,6 +25,7 @@ window.onload =() => {
     }
 
     document.querySelector('contact-card').setAttribute('config', JSON.stringify(config));
+    document.querySelector('contact-card').removeAttribute('bootstraped');
   }
 
   document.getElementById('name').addEventListener('blur', (e) => {
